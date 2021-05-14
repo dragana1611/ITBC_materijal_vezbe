@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .float_div_left, .float_div_right{
+            border:2px solid black;
+            float:left;
+            width:200px;
+        }
+        .float_div_right{
+            /* float:right; */
+        }
+        img{ width:80%;}
+        .okolo{
+            /* overflow:auto; */
+        }
+        .cisti{ 
+            margin-top:3em;
+            position:relative; /* static */
+            top:-3em;
+            left:-50%;
+            background-color: white;
+            z-index:10;
+        }
+        .cisti_float::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .br{ 
+            position:relative;
+            background-color: lightblue;
+            border:2px solid black;
+            z-index:20;
+            /* opacity:0.5; */
+        }
+        .fixno{
+            border:2px solid black; 
+            background-color: lightcoral;
+            position:fixed; 
+            right:100px; left:100px;
+            z-index:100;
+        }
+        .abs{
+            border:2px solid black;
+            background-color: lightgreen;
+            position: absolute;
+            top:0; left:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixno">SADRZAJ</div>
+    <div class="float_div_left">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, in eveniet quibusdam aperiam nemo omnis expedita eius provident hic pariatur animi cupiditate? Eaque autem quisquam a ad commodi repellat accusantium.
+        <!-- <img src="alien3.png" />
+        <p>sfdjh</p>
+        <h2>sfjhsdkfhsdkhf</h2> -->
+    </div>
+    <div class="float_div_right">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, in eveniet quibusdam aperiam nemo omnis expedita eius provident hic pariatur animi cupiditate? Eaque autem quisquam a ad commodi repellat accusantium.
+    </div>
+    <div class="cisti_float"></div>
+    <div class="cisti">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a ratione corporis dolorum quae exercitationem at ducimus veritatis. At temporibus sed non impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    </div>
+    <div class="br"> iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+        <div class="abs">OVO JE APSOLUTE</div>
+        impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a ratione corporis dolorum quae exercitationem at ducimus veritatis. At temporibus sed non impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a ratione corporis dolorum quae exercitationem at ducimus veritatis. At temporibus sed non impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a ratione corporis dolorum quae exercitationem at ducimus veritatis. At temporibus sed non impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a ratione corporis dolorum quae exercitationem at ducimus veritatis. At temporibus sed non impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a ratione corporis dolorum quae exercitationem at ducimus veritatis. At temporibus sed non impedit exercitationem voluptates, explicabo quaerat commodi illo nobis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore repudiandae deserunt debitis voluptates quae repellendus esse temporibus cumque aut cum, dolorem libero quos eveniet. Sunt est iste voluptate veniam!Lorem
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iure eius nulla dolores delectus optio accusantium. Debitis asperiores sequi velit cum beatae dolorum ducimus enim optio, suscipit labore doloremque quis?
+    </div>
+    
+</body>
+</html>

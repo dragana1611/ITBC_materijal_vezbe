@@ -1,0 +1,36 @@
+table.prva, table.druga, th, td {
+    border:1px solid black;
+}
+/*table{
+    border-collapse: collapse;
+}*/
+.zuto {
+    background-color: yellow;
+}
+.prva {
+    border-collapse: collapse; 
+}
+
+table.druga th:nth-child(3){
+    background-color: yellow;
+}
+table.druga td:nth-child(3){
+    background-color: yellow;
+}
+th {
+    text-align-last: left;
+
+}
+table.prva tr:nth-child(even){
+    font-style: italic;
+} 
+.druga{
+border-collapse: collapse; 
+}
+table.druga:hover tr:nth-child(even){
+    background-color: yellow;
+    
+}
+table.druga tr:nth-child(3n){
+    color: blue;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body *{ border:2px solid black; }
+        #glavni{
+            width:500px;
+            padding:2em;
+        }
+        main, header{
+            padding:1em;
+        }
+        header{
+            margin-bottom: 1em;
+            width:100%;
+            box-sizing: border-box;
+        }
+        main>*{
+            padding:1em;
+        }
+        #img{
+            display:block; /*block, inline, inline-block, none */
+            width:200px;
+            /* visibility:hidden; visible; */
+            /* opacity:1;  0-1  */
+            /* za span probati block i inline-block sa width */
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, <span id="img" class="test">consectetur</span> elit. Dolorem consequuntur quia dolor ad nemo quod excepturi. Rerum magnam itaque dolor maiores, eveniet iste? Sapiente, voluptates voluptas veritatis explicabo minima reprehenderit?</p>
+    <div id="glavni">
+        BODY
+        <header>
+            Header
+        </header>
+        <main>
+            Main
+            <div id="img">IMG</div>
+            <article>
+                <h2>HEADLINE</h2>
+                <div class="content">
+                    CONTENT
+                </div>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

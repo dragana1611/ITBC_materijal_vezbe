@@ -1,0 +1,19 @@
+div{
+    background-color: blue;
+}
+div>div{
+    background-color: green;
+}
+div div span{
+    background-color: yellow;
+}
+div span{
+    background-color: grey;
+}
+div#treci{
+    background-color: red;
+    color: white;
+}
+div#treci span{
+    background-color: orange;
+}

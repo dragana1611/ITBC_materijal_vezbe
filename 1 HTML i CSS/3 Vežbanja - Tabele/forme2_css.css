@@ -1,0 +1,43 @@
+form{
+margin: 100px auto;
+padding: 5px;
+}
+fieldset{
+    margin: auto;
+    width: 400px;
+    border: none;
+}
+input{
+    border:none;
+    border-bottom: 1px solid rgb(204, 203, 203);
+    width: 300px;
+    height: 60px;
+    color: lightslategrey;
+
+}
+button{
+    background: rgb(51, 248, 51);
+    height: 50px;
+    width: 100px;
+    color: white;
+    text-shadow: 1px 1px  lightslategray;
+    border: none;
+}
+p{
+    color: lightslategray;
+}
+label{
+    color: lightslategray;
+}
+.icon{
+    background-color:transparent;
+    background: url(bank_card.png) no-repeat left top;
+    
+}
+#ch_box{
+height: 20px;
+width: 20px;
+position: relative;
+left:-140px;
+}
+

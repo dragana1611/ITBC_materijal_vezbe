@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Importuje "naša slova" -->
+    <meta charset="UTF-8">
+
+    <!-- Početna podešavanja za responsive site -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Poveyivanje sa css fajlovima (stilovima koje kreiramo) -->
+    <link rel="stylesheet" href="stilovi/style.css">
+    <link rel="stylesheet" href="stilovi/style-elem.css">
+
+    <!-- Link za ikonice -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Dodir prirode</title>
+</head>
+<body>
+    
+    <!-- heder sekcija -->
+    <header class="col-12">
+        <h1>Dodir prirode</h1>
+    </header>
+
+    <!-- nav (meni) + aside -->
+	<nav class="col-3">
+		<ul>
+			<li><a href="#biljke"><i class="fa fa-leaf"></i> Biljke</a></li>
+			<li><a href="#zivotinje"><i class="fa fa-paw"></i> Životinje</a></li>
+			<li><a href="#pejzazi"><i class="fa fa-photo"></i> Pejzaži</a></li>
+		</ul>
+	</nav>
+
+	<aside class="col-9">
+		Podelite svoje fotografije prirode sa nama! <br><br>
+
+		<cite>
+			"Nema stvari koja bi bila tako vredna poučavanja kao priroda."<br>
+			Nikola Tesla 
+		</cite>
+	</aside>
+
+    <!-- slike -->
+	<div class="col-4">
+		<img src="slike/lights.jpg" alt="lights">
+	</div>
+
+	<div class="col-4">
+		<img src="slike/mountains.jpg" alt="mountains">
+	</div>
+
+	<div class="col-4">
+		<img src="slike/nature.jpg" alt="nature">
+	</div>
+
+    <!-- citati -->
+	<article class="col-3">
+		<b id="biljke">Biljke</b>
+		<br><br>
+		<cite>
+			Sreća - to je biti sa prirodom, gledati je i s njom govoriti.<br>
+			L. N. Tolstoj 
+		</cite>
+	</article>
+	<article class="col-4">
+		<b id="zivotinje">Životinje</b>
+		<br><br>
+		<cite>
+			Priroda je jedina knjiga koja na svim listovima nudi mnogo sadržaja.<br>
+			Goethe
+		</cite>
+	</article>
+	<article class="col-5">
+		<b id="pejzazi">Pejzaži</b>
+		<br><br>
+		<cite>
+			Priroda nam skriva svoje tajne jer je veličanstvena, a ne jer je varalica.
+			Zagledaj se duboko, duboko u prirodu, i tada ćeš sve bolje razumjeti.<br>
+			Albert Einstein
+		</cite>
+	</article>
+
+    <!-- forma -->
+    <h1 class="col-12 form-title">Pošaljite nam sliku</h1>
+    <form action="#">        
+        <div class="row">
+            <label class="col-4">Autor:</label>
+            <input type="text" class="col-8">
+        </div>
+
+        <div class="row">
+            <label class="col-4">Naziv slike:</label>
+            <input type="text" class="col-8">
+        </div>
+
+        <div class="row">
+            <label class="col-4">Odaberite datoteku:</label>
+            <input type="file" class="col-8">
+        </div>
+
+        <div class="row">
+            <span class="col-4">&nbsp;</span>
+            <input type="submit" class="col-2" value="Pošalji">
+            <span class="col-6">&nbsp;</span>
+        </div>
+    </form>
+
+    <!-- futer -->
+    <footer class="col-12">
+        <h4>Dobrodošli na naš sajt!</h4>
+    </footer>
+</body>
+</html>

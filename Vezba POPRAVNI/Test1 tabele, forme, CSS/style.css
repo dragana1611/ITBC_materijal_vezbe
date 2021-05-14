@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+span{
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    margin: 20px;
+    padding: 5px;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bolder;
+}
+span a{
+    text-decoration: none;
+}
+span a:hover{
+    background-color: orange;
+}
+table{
+    text-align: center;
+    margin: 20px;
+}
+td{
+    padding: 5px;
+}
+.it  {
+    margin-left: 20px;
+    
+}
+ol,ul{
+    margin-left: 40px;
+    
+}
+ol{
+    margin-bottom: 20px;
+}
+.qa{
+    color: green;
+}
+li.grad{
+    color: orange;
+}
+div.kontakt {
+    margin: 50px auto;
+    text-align: center;
+}
+div.kontakt h1{
+    margin-bottom: 10px;
+}
+div.kontakt img{
+    margin: 10px;
+    border: 5px solid orange;
+}
+div.kontakt h3{
+    color: orange ;
+}
+div.kontakt p{
+    margin-bottom: 20px;
+}
+div.kontakt a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: green;
+}
+
+div.kontakt a:visited{
+   color: red;
+}
+div.forma{
+    margin: 50px auto;
+    padding: 10px;
+}
+div.forma a{
+   padding: 2px;
+}
+div.forma h4{
+    margin: 20px;
+}
+fieldset{
+    width: 900px;
+    height: 180px;
+    margin-left: 20px;
+}
+fieldset.fs{
+    width: 900px;
+    height: 150px;
+    margin-left: 20px;
+}
+label{
+    margin: 10px;
+}
+input{
+    margin: 10px;
+    height: 30px;
+    width: 880px;
+}
+legend{
+    margin: 10px;
+}
+button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: orange;
+    color: whitesmoke;
+    margin-left: 20px;
+}
+
+select{
+    width: 880px;
+    height: 30px;
+    margin: 10px;
+}
+label#kursl{
+    width: auto;
+    height: auto;
+}
+input#kurs2{
+    height: 15px;
+    margin-left: 10px;
+    width: auto;
+}
+input#kurs3{
+    height: 15px;
+    margin-left: 10px;
+    width: auto;
+}
+input#cb{
+    margin-left: 20px;
+    height: auto;
+    width: auto;
+}
+label#prijava{
+    margin-left: 2px;
+}
+
+
+
+
+

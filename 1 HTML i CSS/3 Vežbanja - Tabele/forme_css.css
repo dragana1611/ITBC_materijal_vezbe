@@ -1,0 +1,19 @@
+fieldset{
+    border: 2px solid darkviolet;
+    margin: 100px auto;
+    width: 300px;
+}
+p{
+    color:lightslategray;
+}
+h1{
+    color:darkorchid;
+}
+input{
+    color: lightslategray;
+    width: 260px;
+}
+button{
+    background: darkviolet;
+    color: white;
+}

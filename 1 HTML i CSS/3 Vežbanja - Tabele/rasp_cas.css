@@ -1,0 +1,20 @@
+table{
+    border: 1px solid black;
+    empty-cells: show;
+    margin: 100px auto;
+    
+
+}
+th, td{
+    border: 1px solid black;
+}
+td{
+    width: 100px;
+}
+th#uspravno {
+    
+    writing-mode:vertical-lr;
+    text-orientation: upright;
+    
+    color: blue;
+}

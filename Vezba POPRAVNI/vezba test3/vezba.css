@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+table{
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+td{
+    border: 1px solid darkgreen;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    padding: 2px;
+}
+.boja1{
+    background-color: azure;
+}
+.boja2{
+    background-color:chartreuse;
+}
+img{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+p{
+    margin: 20px;
+    padding: 5px;
+    text-indent: 15px;
+    text-align: justify;
+}
+h1{
+    font-size: 150%;
+    margin-left: 20px;
+}
+.podli{
+    color: blueviolet;
+}
+ul{
+    margin-left: 30px;
+}

@@ -1,0 +1,78 @@
+table{
+    
+    max-width: max-content;
+    max-height: max-content;
+    margin: 100px auto;
+    align-content: center;
+   
+}
+img{
+    
+    border-radius: 50%;
+    height: 150px;
+    margin: 5px;
+}
+.porodica{
+    font-size: 120%;
+}
+.prijatelji{
+    font-size: 120%;
+}
+.kolege{
+    font-size: 120%;
+
+}
+td{
+    text-align: center;
+    padding:15px;
+    font-size: 120%;
+    color: black ;
+}
+h1{
+    font-size: 3em;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color:orange;
+}
+.porodica h2{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em;
+    color: green;
+}
+.prijatelji h2
+{   
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em;
+    color: blue;
+}
+.kolege h2{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em;
+    color:red;
+}
+
+.porodica img{
+    border-style: dashed;
+    border-color: green;
+    border-width: 3px;
+}
+.prijatelji img{
+    border-style: dashed;
+    border-color: blue;
+    border-width: 3px;
+    
+}
+.kolege img{
+    border-style: dashed;
+    border-color: red;
+    border-width: 3px;
+}
+#avatar{
+    height: 150px;
+    width: 150px;
+    background-image: url("myavatar.png");
+    background-size:inherit;
+    border: 5px solid green;
+}
+
+
+

@@ -1,0 +1,68 @@
+/* Ovde se nalaze stilovi za responsive dizajn */
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+/* 
+@media only screen and(min-width: 700px) - Važi za širinu od 700px naviše
+@media only screen and(max-width: 700px) - Važi za širinu do 700px (700px i manje)
+@media screen and(max-width: 700px) and(min-width: 500px) - Važi za širini ekrana između 500px i 700px
+*/
+
+/*Za mobilne telefone*/
+@media only screen and (max-width: 700px){
+    [class*="col-"]{
+        width: 100%;
+    }
+}
+
+/*Za desktop uređaj*/
+@media only screen and (min-width: 700px){
+	[class*="col-"]{
+		float: left;
+	}
+	
+    .col-1{
+        width: 8.33%;
+    }
+    .col-2{
+        width: 16.66%;
+    }
+    .col-3{
+        width: 25%;
+    }
+    .col-4{
+        width: 33.33%;
+    }
+    .col-5{
+        width: 41.66%;
+    }
+    .col-6{
+        width: 50%;
+    }
+    .col-7{
+        width: 58.33%;
+    }
+    .col-8{
+        width: 66.66%;
+    }
+    .col-9{
+        width: 75%;
+    }
+    .col-10{
+        width: 88.33%;
+    }
+    .col-11{
+        width: 91.66%;
+    }
+    .col-12{
+        width: 100%;
+    }
+}
+
+

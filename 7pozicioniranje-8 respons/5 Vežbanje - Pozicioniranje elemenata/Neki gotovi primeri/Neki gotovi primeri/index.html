@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, body *{
+            margin:0;
+            padding:0;
+        }
+        p{
+            border: 2px solid black;
+            /* font-size:60px; */
+            /* margin:1em;
+            margin-left: 4em;
+            margin:1em 2em 3em 4em;
+            margin:3em 5em; */
+            padding:1em;
+        }
+        .prvi{ 
+            margin:2em;
+            height:5em;
+            border:20px solid black;
+            outline:10px solid red;
+        }
+        .drugi{ margin-top:2em;} /* ne racuna se*/
+        input{
+            /* margin:3em; */
+            /* line-height:2em; */
+            padding: .5em 1em;
+        }
+        div{ text-align: center;}
+        div p{ width:300px; margin: 1em auto;}
+        .sa_slikom{
+            background: url('bck.png') no-repeat left / 30px;
+            margin: 2em;
+            padding-left: 35px;
+            border:none;
+            border-bottom:2px solid gray;
+        }
+        .sa_slikom:focus{
+            outline:none;
+            border:2px inset gray; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="prvi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ab aliquam ad odit consectetur <input /><input />eum enim placeat rem qui dolore, ipsam, corporis praesentium id modi quos fuga voluptatum, sint fugiat.</p>
+        <p class="drugi">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ab aliquam ad odit consectetur eum enim placeat rem qui dolore, ipsam, corporis praesentium id modi quos fuga voluptatum, sint fugiat.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta ab aliquam ad odit consectetur eum enim placeat rem qui dolore, ipsam, corporis praesentium id modi quos fuga voluptatum, sint fugiat.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, in quidem est vitae architecto voluptatum saepe voluptas quis ducimus voluptatibus, molestiae repellendus corrupti non quam esse enim sint reiciendis similique.</p>
+    </div>
+    <input type="text" class="sa_slikom">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nemo quisquam, minima, ullam totam debitis atque nostrum qui perferendis esse autem vitae voluptatem, dolore provident! Exercitationem consequuntur similique consequatur quo.</p>
+</body>
+</html>

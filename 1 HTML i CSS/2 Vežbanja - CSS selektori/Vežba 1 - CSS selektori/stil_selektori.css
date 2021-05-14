@@ -1,0 +1,160 @@
+/*Odnosi se na sve paragrafe u html dokumentu*/
+p{
+	text-align: left;
+	margin-left: 20px;
+}
+	
+/*Odnosi se na sve h1 i p elemente*/	
+h1,p{
+	font-family: Arial, Helvetica, Sans-serif;
+}
+
+/*Odnosi se na sve h3 elemente i id sa naznakom rn*/
+h3,#rn{
+	text-shadow: 1px 1px red;
+}
+
+/*Odnosi se na sve elemente sa klasom 'crveno'*/
+.crveno{
+	color: red;
+}
+
+/*Odnosi se na sve paragrafe sa klasom 'crveno'*/
+p.crveno{
+	font-style: italic;
+}
+
+/*Odnosi se samo na one paragrafe koji su unutar div elementa*/
+div p{
+	border: red 1px dotted;
+}
+
+/* Znak > se odnosi samo ne direktne potomke tj. stil će se u ovom slučaju odnositi samo na paragrafe koji su direktni potomci div elementa */
+div>p{
+	background-color: lightgray;
+}
+
+/* Znak +  se odnosi samo na svakog prvog sledbenika iza elemnta tj. stil će se u ovom slučaju odnositi samo na svaki prvi paragraf iza div elementa*/
+div+p{
+	text-shadow: 1px 1px yellow;
+}
+
+/* Znak ~ se odnosi na sve sledbenike elementa tj. stil će se u ovom slučaju osnositi na sve paragrafe koji su sledbenici div elementa*/
+div~p{
+	background-color: grey;
+}
+
+/*Odnosi se na sve one <a> elemente koji imaju target atribut*/
+a[target]{
+	text-decoration: none;
+}
+
+/*Odnosi se samo na ove <a> elemente koji imaju target="_blank" atribut*/
+a[target=_blank]{
+	color: green;
+}
+
+/*Odnosi se na one <li> elemente koji u nazivu svoje kalse sadrže reč "ns"*/
+li[class*="ns"]{
+	list-style-type: none;
+}
+
+/*Odnosi se na one <li> elemente koji u nazivu svoje kalse sadrže reč "ns-"*/
+li[class*="ns-"]{
+	font-style: italic;
+}
+
+/*Odnosi se na svaki prvi <li> element u listi*/
+li:first-child{
+	color: blue;
+}
+
+/*Odnosi se na svaki poslednji <li> element u listi*/
+li:last-child{
+	color: green;
+}
+
+/*Odnosi se na prvo slovo svakog <p>*/
+p::first-letter{
+	font-size: 200%;
+}
+
+/*Odnosi se na prvi red svakog <p>*/
+p::first-line{
+	text-decoration: underline;
+}
+
+/*Odnosi se na sve one elemente koji nisu <p>*/
+:not(p){
+	text-align: center;
+}
+
+/*Pre svakog <ul> taga dodaj stil*/
+ul::before{
+	content: "-Zapamtite ovo!";
+	color: red;
+	font-weight: bold;
+}
+
+/*Posle svakog <ul> taga dodaj stil*/
+ul::after{
+	content: "-Bitno je!";
+	color: orange;
+}
+
+/*Selektovati n-ti (kod nas drugi) element tr*/
+tr:nth-child(2){
+	color: red;
+	background-color: lightgray;
+}
+
+/*Selektuje sve neparne <tr> elemente*/
+tr:nth-child(odd){
+	background-color: lightblue;
+}
+
+/*Selektuje sve parne <tr> elemente*/
+tr:nth-child(even){
+	background-color: lightgray;
+}
+
+/*Selektuje broječem/iteratorom gde je n iterator, a +1 predstavlja ostatak pri deljenju sa 3*/
+tr:nth-child(3n+1){
+	font-style: italic;
+	font-weight: bold;
+}
+
+.link{
+	color: blue !important;
+	text-decoration: none !important;
+}
+
+/*:link selektuje sve linkove koji nisu posećeni*/
+.link:link{
+	font-weight: bold;
+}
+
+/*:visited selektuje sve linkove koji su posećeni tj. na koje je kliknuto*/
+.link:visited{
+	color: green !important;
+}
+
+/*:hover kada stanemo preko linka*/
+.link:hover{
+	color: yellow !important;
+}
+
+/*:active u trenutku selektovanja linka*/
+.link:active{
+	color: red !important;
+}
+
+/*kada je <input> polje u fokusu tj. kada kliknemo na njega*/
+input:focus{
+	background-color: yellow;
+}
+
+
+
+
+

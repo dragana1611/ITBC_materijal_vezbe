@@ -1,0 +1,83 @@
+/* Ovde se nalazi stilizacija HTML tagova */
+
+/* Stilizovanje hedera i futera */
+header, footer, .form-title{
+    background-color: aqua;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+}
+
+/* Stilizovanje menija */
+nav ul{
+    list-style-type: none;
+    padding: 0px;
+    background-color: darkturquoise;
+}
+
+nav ul li{
+    padding: 15px;
+    border-bottom: aqua 1px solid;
+}
+
+nav ul li:hover{
+    background-color: aqua;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+nav ul li i{
+    padding: 5px;
+}
+
+/* Stilizovanje aside sekcije */
+aside{
+    padding: 15px;
+    background-image: linear-gradient(darkturquoise, white);
+}
+
+/* Stilizovanje slika */
+img{
+    width: 100%;
+}
+
+img:hover{
+    opacity: 0.7;
+}
+
+/* Stilizovanje citata (article deo) */
+article{
+    background-image: linear-gradient(darkturquoise, white);
+    padding: 15px;
+}
+
+/* Stilizovanje forme */
+form{
+    margin-bottom: 50px;
+    padding: 15px;
+}
+
+form>div{
+    padding: 9px;
+}
+
+input{
+    border: 2px darkturquoise solid;
+}
+
+input:focus{
+    background-color: darkturquoise;
+}
+
+input[type=submit]{
+    background-color: darkturquoise;
+    padding: 5px;
+}

@@ -1,0 +1,22 @@
+table, th, td{
+    border: 1px solid blue;
+}
+tr:first-child{
+    width: 145px;
+}
+table{
+    margin: 50px auto;
+    background-image: url("https://www.desktopbackground.org/download/o/2015/02/19/905234_background-images-for-html-hd-wallpapers-and-pictures_1920x1080_h.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+}
+th, td{
+    padding: 10px;
+    width: 80px;
+    height: 30px;
+
+}
+tr:nth-child(2){
+    text-align: center;
+}

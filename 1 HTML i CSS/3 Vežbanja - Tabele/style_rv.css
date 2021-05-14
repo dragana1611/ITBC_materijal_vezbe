@@ -1,0 +1,49 @@
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+#naslov{
+    background-color: orange;
+    color: white;
+    font-size:140% ;
+    letter-spacing: 3px;
+    word-spacing: 20px;
+}
+
+td{
+    border-bottom: 1px solid orange;
+    width: 150px;
+}
+td:not(:nth-child(4)){
+    border-right:1px solid rgb(181, 182, 182);
+}
+th#naslov:last-child{
+    border:none;
+}
+tr:nth-child(even){
+    background-color: peachpuff;
+}
+td:nth-child(1){
+    width: 300px;
+}
+
+tr:last-child{
+    background-color: grey;
+    text-align: right;
+    border: none;
+}
+tr:last-child{
+    border-bottom:none ;
+}
+th,td{
+    padding: 5px;
+}
+th:not(:nth-child(4)){
+    border-right:1px solid rgb(181, 182, 182);
+}
+td:not(:first-child){
+    text-align: right;
+}
+table tr:nth-child(2){
+    height: 40px;
+}
