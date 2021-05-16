@@ -1,7 +1,8 @@
 //Kreirati n proizvoljnih slika i staviti im naizmenično dva različita okvira
 let slika="instagram-variation.png";
 let i=1;
-while(i<=12){
+let n=12
+while(i<=n){
     if(i%2==0){
         document.body.innerHTML += `<img src="${slika}" style="border:1px dashed red"><br>`;
     }
@@ -13,7 +14,7 @@ while(i<=12){
 
 // Odrediti sumu kvadrata parnih brojeva i sumu kubova neparnih brojeva
 
-let n = -13;
+  n = -13;
 let m = 10;
 let sumaPar=0;
 let sumaNep=0;
@@ -66,9 +67,6 @@ console.log(`suma kvdrata brojeva je ${sumKv}`);
 
 
 //Preuzeti proizvoljne tri slike sa istom ekstenzijom i imenovati ih 1, 2 i 3. For petljom u HTML-u ispisati svaku od sličica uz pomoć brojača (iteratora).
-let slika1="slike za vezbu/1.JPG";
-let slika2="slike za vezbu/2.JPG";
-let slika3="slike za vezbu/3.JPG";
 
 i=1;
 n=12;
@@ -243,13 +241,13 @@ for(i=1; i<=lilist; i++){
        uolist +=
         `
         <ul>
-            <li class="podli">LI ${i}</li>
+            <li class="podli">ul ul li element ${i}</li>
         </ul>
 `;
       }
     else{
       uolist +=
-        `<li>LI ${i}</li>
+        `<li>ul li element ${i}</li>
       `; 
     }
          
@@ -277,19 +275,18 @@ for(i=1; i<=lilist; i++){
 
 
 
-//Napisati program za ispis pravouglog trougla kao na slici sa željenim brojem redova:
+//X TOUGAO - Napisati program za ispis pravouglog trougla kao na slici sa željenim brojem redova:
 i=1;
 j=1;
 n=7;
 for(i=1; i<=n; i++){
     for(j=1; j<=i; j++){
         document.body.innerHTML +=`<span>x</span>`;
-       
     }
     document.body.innerHTML += `<br>`;
 }
 
-// Ix
+// Ix TROUGAO
 
 for (i = 1; i <= n; i++)
     {

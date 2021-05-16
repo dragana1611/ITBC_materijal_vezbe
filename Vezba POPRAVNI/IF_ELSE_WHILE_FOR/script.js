@@ -36,24 +36,24 @@ else{
 
 //Specijalitet jedne poslastičare je slatkiš po imenu jaban koje se pravi od jabuka i banana. Za jednu porciju ovog slatkiša potrebme su 2 jabuke i 3 banane. Poslastičara jabuke i banane dobija od jednog lokalnog dobavljača. U svakoj isporuci ima 20% oštećenih jabuka koje se ne mogu iskoristiti za pripremu jaban slatkiša. Napisati funkciju koja za prosleđeni broj isporučenih jabuka i prosleđeni broj isporučenih banana, određuje i vraća koliko porcija jaban slatkiša je moguće da poslastičar napravi. Broj oštećenih jabuka zaokružiti na najbliži ceo broj.
 
-/*
+
 let banana= 356;
-let isporuceneJab = 200;
+let isporuceneJab = 400;
 let upotrebljiveJab = Math.round(0.8*isporuceneJab);
-let porcJaban=0;
-console.log(upotrebljiveJab);
-while(upotrebljiveJab!=0 || banana!=0){
+
+console.log(`upotrebljive jabuke:${upotrebljiveJab}`);
+
     let jabanJabuka= Math.floor(upotrebljiveJab/2);
-    console.log(jabanJabuka);
+    console.log(`jabuke za jaban: ${jabanJabuka}`);
     let jabanBanana = Math.floor(banana/3);
-    console.log(jabanBanana);
-        
-        porcJaban++
-   }
-console.log(porcJaban);*/
-
-
-
+    console.log(`banane za jaban: ${jabanBanana}`);
+        if(jabanJabuka>jabanBanana){
+            console.log(`moguce je napraviti ${jabanJabuka} porcija jabana`);
+        }
+        else{
+            console.log(`moguce je napraviti ${jabanBanana} porcija jabana`);
+        }
+    
 //Dužina fudbalskog terena je 95 metara, a širina 47 metara. Ana trči po pravougaonoj stazi koja je sa svake strane terena spolja udaljena po 5 metara. Koliko ona pretrči, ako se zna da je optrčala teren 3 puta.
 
 duzina_terena = 95
@@ -130,13 +130,11 @@ else if (tezinaPos>2000){
 /*// Test3- zadatak 3. Cvećarka želi da pošalje ruže svojim redovnim kupcima. Uneti broj ruža
 koje cvećarka trenutno ima u radnji i broj redovnih kupaca. U konzoli
 ispisati koliko NAJMANJE ruža cvećarka treba da dokupi da bi svaki
-kupac dobio isti broj ruža, a da joj pri tome ne ostane nijedna ruža u
-radnji.
+kupac dobio isti broj ruža, a da joj pri tome ne ostane nijedna ruža u radnji.
 ➢ Primer 1:
 ○ Broj ruža u cvećari 101
 ○ Broj redovnih kupaca 25
-○ Broj ruža koje treba da dokupi je 24 (kako bi svaki kupac dobio po
-5 ruža).
+○ Broj ruža koje treba da dokupi je 24 (kako bi svaki kupac dobio po 5 ruža).
 ➢ Primer 2:
 ○ Broj ruža u cvećari 100
 ○ Broj redovnih kupaca 25
@@ -179,13 +177,11 @@ console.log(suma);
 console.log(brBroj);
 console.log(suma * brBroj);
 
-/*Test3- zadatak 5. Odrediti razliku zbira parnih brojeva od n do m koji su deljivi sa 3 i broja
-brojeva od n do m kojima je poslednja cifra 3 (uključujući i brojeve n i
-m).
+/*Test3- zadatak 5. Odrediti razliku zbira parnih brojeva od n do m koji su deljivi sa 3 i broja brojeva od n do m kojima je poslednja cifra 3 (uključujući i brojeve n i m).
 ➢ Rezultat računanja ispisati u konzoli. */
 
 n= 5;
-m=50;
+m=30;
 suma=0;
 brBroj=0;
 
@@ -282,25 +278,239 @@ for(let i=k; i<=n; i++){
 }
 console.log(suma);
 
-//WHILE - Zadatak 3: Najstarija osoba 
-//Napisati program koji učitava godine rođenja svih korisnika gerontološkog centra. Korisnik unosi ove godine jednu po jednu. Na kraju korisnik unosi nulu, nakon koje program ispisuje koliko godina ima najstarija osoba u tom gerontološkom centru. Tekuću godinu definisati kao celobrojnu konstantu. 
-//Primer. Ako je trenutna godina 2018 i unose se godine: 1956, 1948, 1950, 1956, 1949, učitavanje se prekida nakon unosa broja 0, ispisuje se: „Najstarija osoba ima 70 godina.” (jer je 70 = 2018 - 1948) 
+//Jedan butik ima radno vreme od 9h do 20h radnim danima, a vikendom od 10h do 18h. Preuzeti dan i vreme sa računara i ispitati da li je butik trenutno otvoren.
 
+let pocRD=9;
+let krajRD=20;
+let pocVik=10;
+let krajVik=18;
+d=new Date();
+dan=d.getDay();
+let trVr=d.getHours();
+if(dan<6 && dan!=0){
+    if(pocRD>trVr && krajRD<=trVr){
+        console.log(`Butik trenutno nije otvoren`);
+    }
+    else{
+        console.log(`Butik je trenutno otvoren`);
+    }
+}
+else{
+    if (pocVik > trVr && krajVik <= trVr) {
+        console.log(`Butik trenutno nije otvoren`);
+    }
+    else {
+        console.log(`Butik je trenutno otvoren`);
+    }
+}
 
+//Naspisati na ekranu „ekstremna temperatura“ ukoliko je temperatura manja od -15 stepeni Celzijusovih  i veća od 40 stepeni Celzijusovih.
+let temp=50;
+if(temp<-15 || temp>40){
+    document.body.innerHTML += `<p>EXTREMNA TEMPERATURA</p>`;
+}
 
-/* Napisati program koji učitava količinu para koju kupac ima i cene čokolada koje on želi da kupi. Kada ukupna cena čokolada bude veća od količine para koje kupac ima, prekinuti učitavanje cena i ispisati koliko čokolada kupac može da kupi. 
-Primer. Ako kupac ima 1000 dinara i unose se cene: 130, 280, 90, 280, 100, 150, učitavanje se prekida nakon unosa broja 150 (jer je 130 + 280 + 90 + 280 + 100 + 150 > 1000) i ispisuje se: „Kupac moze da kupi 5 cokolada.”
- */ 
-let novac=500;
-let cenaCok=120;
-suma=0;
-let brojac=0;
-
-do{
-    suma+=cenaCok;
+//Naći koji je najveći od tri uneta broja $a, $b i $c.
+let a=45;
+let b=110;
+let c=300;
+if(a>b && a>c){
+    let max=a;
+    console.log(`max broj je ${max}`);
+}
+else if(b>a && b>c){
+    max=b;
+    console.log(`max broj je ${max}`);
+}
+else{
+    max=c;
+    console.log(`max broj0 je ${max}`);
 }
 
 
+//ŠAH tabla - Kreirati 64 span elemenata i rasporediti ih kao na slici desno, tako da elementi izgledaju kao polja šahovske table. 
+//U realizaciji ovog zadatka koristiti for petlju.
+k=0;
+for(let i=1; i<=8; i++){
+    for(let j=1; j<=8; j++){
+        k++;
+        if(i%2!=0){
+            if(k%2==0){
+                document.body.innerHTML += `<span class="polje2">${k}</span>`;
+            }
+            else{
+                document.body.innerHTML += `<span class="polje1">${k}</span>`;
+            }
+        }
+        else{
+            if(k%2==0){
+                document.body.innerHTML += `<span class="polje1">${k}</span>`;
+            }
+            else{
+                document.body.innerHTML += `<span class="polje2">${k}</span>`;
+            }
+        }
+                if (k % 8 == 0)
+                document.body.innerHTML += `<br>`;
+    }
+}
+
+//Kreirati 64 span elemenata i rasporediti ih kao na slici desno, koristeći for petlju.
+for(let i=1; i<=64;i++){
+    document.body.innerHTML += `<span>${i}</span>`
+    if(i%8==0){
+        document.body.innerHTML += `<br>`
+    }
+}
+
+//LISTA - Koristeći for petlju kreirati neuređenu listu sa ugnježdenim elementima, kao što je prikazano na slici sa desne strane.
+
+let lista=`<ul>`;
+for(let i=1; i<=10; i++){
+    lista += `<li style="margin-left:20px;"> Element ${ i }`;
+    if(i%3==2){
+        i++
+        lista += `
+        <ul>
+        <li style="color:darkviolet; margin-left:40px;">ELement ${i}</li>
+        </ul>
+        </li>`;
+    }
+    
+    lista += `</li>`;
+}
+lista += `</ul>`;
+document.body.innerHTML += lista;
 
 
+/*TABELA - Napraviti tabelu sa 6 redova.
+Svaki red tabele treba da ima po dve ćelije(dve kolone).
+Svakom parnom redu dodati klasu „obojen“.
+Korišćenjem CSS - a, klasi obojen postaviti proizvoljnu boju pozadine.*/
 
+let tabela = `<table>`;
+for(let i =1; i<=6; i++){
+    if(i%2 !=0){
+        tabela += `<tr class="boja1">
+        <td>TEXT</td>
+        <td>TEXT</td>
+        </tr>`;
+    }
+    if(i%2==0){
+        tabela += `<tr class="boja2">
+        <td>TEXT</td>
+        <td>TEXT</td>
+        </tr>`;
+    }
+}
+tabela += `</tabela>`;
+document.body.innerHTML += tabela;
+
+
+//Prebrojati koliko brojeva od n do m je pozitivno, a koliko njih je negativno. *
+ n=-23;
+ m=10;
+ brojacPoz=0;
+ brojacNeg=0;
+ for(i=n; i<=m; i++){
+    if(i>0){
+        brojacPoz++;
+    }
+    
+    else{
+        if(i<0){
+        brojacNeg++;
+        }
+    }
+}
+console.log(`pozitivnih brojeva ima ${brojacPoz}`);
+console.log(`negativnih brojeva ima ${brojacNeg}`);
+//Prebrojati koliko je brojeva od 5 do 50 koji su deljivi sa 3 ili sa 5. *
+brojacDel = 0;
+
+for (let i = 5; i <= 50; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+        brojacDel++;
+    }
+}
+console.log(`ima ${brojacDel} brojeva koji su deljivi sa 3`);
+
+
+//Izračunati sumu prirodnih brojeva u intervalu od 1 do n čija je cifra jedinica 8.
+n=47;
+suma=0;
+for(let i=1; i<=n; i++){
+    let cifra=i%10;
+    if(cifra==8){
+    suma+=i;
+    }
+}
+console.log(`zbir brojeva sa cif jed 8 je ${suma}`);
+
+//	Napisati program da nađe proizvod prirodnih brojeva od a do b djeljivih sa c i koliko ih ima.
+a=5;
+b=25;
+c=5;
+proizvod=1;
+brojacC=0;
+
+for(let i =a; i<=b; i++ ){
+    if(i%c==0){
+        brojacC++;
+        proizvod *= i;
+    }
+}
+console.log(`proizvod je ${proizvod} a brojeva ima ${brojacC};`)
+
+//Izračunati aritmetičku sredinu prirodnih brojeva od k do n koji su djeljivi sa 3
+k=3;
+n=30;
+suma=0;
+brojac=0;
+for(let i=k; i<=n; i++){
+    if(i%3==0){
+        brojac++;
+        suma += i;
+    }
+}
+let arSr = suma/brojac;
+console.log(`aritmeticka sredina je ${arSr}`);
+
+
+//Prebrojati i izračunati sumu brojeva od n do m kojima je poslednja cifra 4 i parni su.
+
+n=2;
+m=30;
+suma=0;
+brojac=0;
+for(let i=n; i<=m; i++){
+    if(i%10==4){
+        brojac++;
+        suma +=i;
+    }
+}
+console.log(`suma je ${suma} a ima ${brojac} brojeva`);
+
+//Odrediti proizvod brojeva od n do m koji su deljivi brojem a *
+n = 2;
+m = 20;
+a = 4;
+proizvod=1;
+for (let i = n; i <= m; i++) {
+    if (i % a == 0) {
+        proizvod *= i;
+    }
+}
+console.log(`proizvod je ${proizvod}`);
+
+
+//KINA/INDIJA - “Процењује се да је Кина на дан 1.7.2019. имала 1.420.062.022 становника, а Индија 1.368.737.513. Број становника у Кини се сваке године повећа за 0,35%, а у Индији за 1,08%. Након колико година ће Индија престићи Кину по броју становника, под претпоставком да се годишњи раст броја становника ни у једној од ове две државе неће мењати?”
+let kina = 1420062022;
+let indija = 1368737513;
+let brGod=0;
+while(kina>indija){
+    kina = (1+0.0035)*kina;
+    indija= (1+0.0108)*indija;
+    brGod++;
+}
+console.log(brGod);

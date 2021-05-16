@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.polje1{
+    text-align: center;
+    
+    
+}
+.polje2{
+    background-color: black;
+    color: white;
+    
+}
+span{
+    display: inline-block;
+    border: 1px solid black;
+    width:80px;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 150%;
+    line-height: 80px;
+}
+
+table{
+    margin: 20px;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+    height: 50px;
+    width:60px ;
+    text-align: center;
+}
+.boja1 {
+    background-color: rgb(247, 191, 109);
+}
+.boja2 {
+    background-color: deeppink;
+}
