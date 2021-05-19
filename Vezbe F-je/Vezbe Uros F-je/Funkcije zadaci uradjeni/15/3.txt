@@ -1,0 +1,58 @@
+/*Napisati funkciju Prost koja ispituje da li broj x prost broj.
+a. Koristeći funkciju prost prikazati sve proste brojeve od 3 do n.
+b. Koristeći funkciju Prost, u glavnom programu prikazati sve parove brojeva za
+koje važi da su blizanci. Dva broja su blizanci ako su prosti i razlikuju se za 2 (npr.
+3 i 5, 5 i 7, 11 i 13). Prikazati sve parove blizanaca nađene do unete granice
+pretrage n.
+*/   
+
+#include<stdio.h>
+#include<math.h>
+
+int Prost(int x)
+{
+	int i=3;
+
+	if (x == 2 || x == 3)
+	return 1;
+
+	if (x % 2 == 0)
+	return 0;
+
+
+	while (i < sqrt(x) && x % i != 0)
+	{
+		i += 2;
+	}
+
+	if (x % i == 0)
+		return 0;
+
+	else return 1;
+}
+main()
+{
+	int n, i;
+
+	printf("Unesi broj n\n");
+	scanf_s("%d", &n);
+
+	for (i = 3; i <= n; i = i + 2)
+	{
+		if (Prost(i))
+		{
+			printf("%d ", i);
+		}
+	}
+	printf("\n");
+	printf("########################################################################################################################");
+
+	for (i = 3; i <= n - 2; i = i + 2)
+	{
+		if (Prost(i) && Prost(i + 2))
+		{
+			printf("Blizanci su:\n");
+			printf("%d %d\n", i, i + 2);
+		}
+	}
+}

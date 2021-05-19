@@ -1,0 +1,52 @@
+/*Napisati funkciju koja u sređuje dati string tako što prvo slovo prevodi u veliko, a sva ostala u
+mala. U glavnom programu učitati string, izvršiti promenu korišćenjem funkcije i štampati
+izmenjeni string.*/
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<ctype.h>
+
+void Sredjuje(char niz[], int n)
+{
+	int i = 0;
+	if (islower(niz[1]))
+	{
+		niz[1] = niz[1] - 32;
+	}
+
+	for (i = 2; i < n + 1; i++)
+	{
+		if (isupper(niz[i]))
+		{
+			niz[i] = niz[i] + 32;
+		}
+	}
+}
+main()
+{
+	int i, n;
+	char nizza[20];
+
+	printf("Unesite duzinu niza.");
+	scanf("%d", &n);
+
+	printf("Unesite string.");
+	for (i = 0; i <= n + 1; i++)
+	{
+		scanf("%c", &nizza[i]);
+	}
+
+	Sredjuje(nizza, n);
+
+	for (i = 0; i <= n + 1; i++)
+	{
+		printf("%c", nizza[i]);
+	}
+
+
+
+
+
+}

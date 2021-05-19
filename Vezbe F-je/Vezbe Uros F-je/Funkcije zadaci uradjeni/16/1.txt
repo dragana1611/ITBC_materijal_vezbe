@@ -1,0 +1,70 @@
+/*. Napisati f-ju koja određuje MAX element niza realnih brojeva. Napisati f-ju koja određuje MIN
+element niza realnih brojeva. Napisati funkciju koja učitava niz realnih brojeva. Napisati
+funkciju koja prikazuje niz realnih brojeva. U glavnom programu, korišćenjem kreiranih
+funkcija, uneti matricu i za svaku njenu vrstu odrediti razliku najvećeg i najmanjeg elementa u
+vrsti.*/
+#include<stdio.h>
+float MAX(float niz[], int n)
+{
+	int i;
+	float max;
+	max = niz[0];
+	for (i = 1; i < n; i++)
+	{
+		if (niz[i] > max)
+		{
+			max = niz[i];
+		}
+	}
+	return max;
+}
+float MIN(float niz[], int n)
+{
+	int i;
+	float min;
+	min = niz[0];
+	for (i = 1; i < n; i++)
+	{
+		if (niz[i] <min)
+		{
+			min = niz[i];
+		}
+	}
+	return min;
+}
+void Unesi(float niz[], int n)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		scanf("%f", &niz[i]);
+	}
+	return;
+}
+void Prikazi(float niz[], int n)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		printf("%.2f ", niz[i]);
+	}
+	printf("\n");
+	return;
+}
+main()
+{
+	float mat[40][30];
+	int i, j, n, m;
+	printf("Unesi dimenzije matrice\n");
+	scanf("%d%d", &n, &m);
+	for (i = 0; i < n; i++)
+	{
+		Unesi(mat[i], m);
+	}
+	for (i = 0; i < n; i++)
+	{
+		Prikazi(mat[i], m);
+		printf("%.2f \n", MAX(mat[i], m) - MIN(mat[i], m));
+	}
+
+}

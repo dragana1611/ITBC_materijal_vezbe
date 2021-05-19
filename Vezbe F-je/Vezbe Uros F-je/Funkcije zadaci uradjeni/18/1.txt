@@ -1,0 +1,57 @@
+/*Napisati funkciju ToLower(...) za pretvaranje stringa u mala slova. Napisati funkciju
+CountVocals(..) koja u reči određuje broj samoglasnika. U glavnom programu uneti N reči i
+prikazati reč sa maksimalnim brojem samoglasnika. Napomena: smatrati da korisnik unosi reč
+po reč. Primer: avion ima 3 samoglasnika; AuTOmobiL ima 5 samoglasnika*/
+#include<stdio.h>
+#include<string.h>
+
+void ToLower(char s[],int n)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		if (s[i] >= 65 && s[i] <= 90)
+		{
+			s[i] += 32;
+		}
+	}
+}
+int CountVocals(char s[], int n)
+{
+	int i,br=0;
+	for (i = 0; i < n; i++)
+	{
+		if (s[i] == 65 || s[i] == 69 || s[i] == 73 || s[i] == 79 || s[i] == 85)
+		{
+			br++;
+		}
+		if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
+		{
+			br++;
+		}
+	}
+	return br;
+}
+main()
+{
+	int N,  i,brojvokala,maxduzina=0;
+	char rec[20],maxrec[20];
+	printf("Unesi broj reci N");
+	scanf("%d", &N);
+	printf("Unesi N reci\n");
+	for (i = 0; i < N; i++)
+	{
+		scanf("%s", rec);
+		brojvokala = CountVocals(rec, strlen(rec));
+		if (brojvokala > maxduzina)
+		{
+			strcpy(maxrec, rec);
+			maxduzina = brojvokala;
+		}
+		ToLower(rec, strlen(rec));
+		puts(rec);
+	}
+	printf("Rec sa max broj vokala je  %s i ima %d vokala\n ", maxrec, maxduzina);
+
+
+}

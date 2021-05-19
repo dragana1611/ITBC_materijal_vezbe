@@ -1,0 +1,31 @@
+/*Napisati funkciju koja proverava da li je string palindrom. U glavnom programu uneti niz
+stringova (niz stingova se pamti kao matrica u kojoj je svaki red jedan string) i izdvojiti sve
+palindrome.  ( anavolimilovana)*/
+#include<stdio.h>
+#include<string.h>
+int Palindrom(char s[], int n)
+{
+	int i = 0;
+	while (s[i] == s[n - i - 1] && i < n / 2)
+	{
+		i++;
+	}
+	if (i >= n / 2) return 1;
+	else return 0;
+
+}
+main()
+{
+	char recenica[10][30];
+	int n, i;
+	printf("Unesi broj stringova ");
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%s", recenica[i]);
+		if (Palindrom(recenica[i], strlen(recenica[i])))
+		{
+			puts(recenica[i]);
+		}
+	}
+}

@@ -1,0 +1,117 @@
+/*a) Funkciju koja iz stringa izbacuje sva pojavljivanja zadatog karaktera
+b) Funkciju koja iz stringa broji sva pojavljivanja zadatog podstringa
+c) Funkciju koja iz stringa izbacuje sva pojavljivanja zadatog podstringa
+d) Funkciju koja u string ubacuje zadati podstring na određenu poziciju
+e) Funkciju koja sređuje string tako što sta slova pretvara u velika*/
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdio.h>
+//*a) Funkciju koja iz stringa izbacuje sva pojavljivanja zadatog karaktera
+void Izbaciznak(char s[], char znak)
+{
+	int p;
+	char pom[50], *x;
+	while (strchr(s, znak) != NULL)
+	{
+		strcpy(pom, s);
+		x = strchr(s, znak);
+		p = x - s;
+		strncpy(s, s, p);
+		strcpy(pom, pom + 1 + p);
+		s[p] = '\0';
+		strcat(s, pom);
+	}
+	return;
+}
+//b) Funkciju koja iz stringa broji sva pojavljivanja zadatog podstringa
+int Brojipodstring(char s[], char p[])
+{
+
+	char *x;
+	 int br = 0;
+	while (strstr(s, p) != NULL)
+
+	{
+		x = strstr(s, p);
+		strcpy(s, x + 1);
+		br++;
+	}
+	return br;
+}
+//c) Funkciju koja iz stringa izbacuje sva pojavljivanja zadatog podstringa
+void Izbacipodstring(char s[], char ps[])
+{
+	int  p;
+	char pom[50], *x;
+	while (strstr(s, ps) != NULL)
+	{
+		strcpy(pom, s);
+		x = strstr(s, ps);
+		p = x - s;
+		//strncpy(s, s, p);
+		s[p] = '\0';
+		strcpy(pom, pom + strlen(ps) + p);
+		
+		strcat(s, pom);
+	}
+	return;
+}
+//d) Funkciju koja u string ubacuje zadati podstring na određenu poziciju
+void Ubacipodstring(char *s, char *ps, int poz)
+{
+	char pom[50];
+
+	strcpy(pom, s + poz);
+	strncpy(s, s, poz);
+	s[poz] = '\0';
+	strcat(s, ps);
+	strcat(s, pom);
+}
+//e) Funkciju koja sređuje string tako što sta slova pretvara u velika*/
+void VelikaSlova(char *s)
+{
+	int i;
+	for (i = 0; i < strlen(s); i++)
+	{
+		if (islower(s[i]))
+		{
+			s[i]=toupper(s[i]);
+		}
+	}
+}
+main()
+{
+	char *s, *ps, zn, pom[50];
+	int pozicija;
+	s = calloc(50, sizeof(char));
+	ps = calloc(5, sizeof(char));
+
+	printf("Unesi string: \n");
+	gets(s);
+
+	printf("Unesi trazeni podstring: \n");
+	gets(ps);
+	strcpy(pom, s);//sacuvamo u pom originalni string
+	printf("Unesi znak \n");
+	zn = getchar();
+	Izbaciznak(s, zn);
+	printf("String nakon izbacivanja znaka: \n");
+	puts(s);
+	printf("String nakon izbacivanja podstringa: \n");
+	strcpy(s, pom);//prekopiramo originalni string
+	Izbacipodstring(s, ps);
+	puts(s);
+	strcpy(s, pom);	
+	printf("zadati podstring se nalazi %d\n", Brojipodstring(s, ps));
+	strcpy(s, pom);
+	printf("ucitaj poziciju za ubacivanje podstringa ");
+	scanf("%d", &pozicija);
+	Ubacipodstring(s, ps, pozicija);
+	printf("Izmenjen string izgleda\n");
+	puts(s);
+	VelikaSlova(s);
+	printf("String posle promene malih u velika slova\n");
+	puts(s);
+
+}

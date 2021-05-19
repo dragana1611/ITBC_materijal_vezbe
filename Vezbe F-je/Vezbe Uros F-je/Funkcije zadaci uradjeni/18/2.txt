@@ -1,0 +1,58 @@
+/*Napisati funkciju koja određuje i vraća koliko se puta prosleđeni karakter javlja u prosleđenom
+stringu. U glavnom programu uneti rečenicu i korišćenjem implementirane funkcije odrediti i
+prikazati koliko se puta u njoj javaljaju velika slova a koliko puta mala slova. */
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+char Odredjuje(char niz[], char zn, int n)
+{
+	int i;
+	int br = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (niz[i] == zn)
+		{
+			br++;
+		}
+	}
+	return br;
+}
+main()
+{
+	int i, vsl=0, msl=0, n,br=0;
+	char niz[30],zn;
+
+	printf("Unesite duzinu stringa.");
+	scanf_s("%d", &n);
+
+	printf("Ucitajte string.\n");
+	for (i = 0; i <=n+1; i++)
+	{
+		scanf_s("%c", &niz[i]);
+	}
+
+	printf("Unesite znak ");
+	scanf_s("%c", &zn);
+
+	for (i = 0; i < n+1; i++)
+	{
+		if (isupper(niz[i]))
+		{
+			vsl++;
+		}
+		if (islower(niz[i]))
+		{
+			msl++;
+		}
+	}
+
+	printf("Ima %d velikih slova i %d malih slova\n", vsl, msl);
+
+	br = Odredjuje(niz, zn, n);
+
+	printf("Znak %c pojavljuje se %d puta\n", zn, br);
+
+
+
+}

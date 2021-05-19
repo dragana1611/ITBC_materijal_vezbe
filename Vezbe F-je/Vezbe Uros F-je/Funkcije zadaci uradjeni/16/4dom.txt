@@ -1,0 +1,29 @@
+/*Napisati funkciju za izračunavanje n!. U glavnom programu korišćenjem funkcije izračunati ... 
+(sabirati do člana sume koji je manji od zadatog EPS)*/
+#include<stdio.h>
+#include<math.h>
+int Faktorijel(int x)
+{
+	int Fak = 1,i;
+	for (i = 1; i <= x; i++)
+		Fak = Fak*i;
+	return Fak;
+}
+main()
+{
+	int i = 1;
+	float S = 0,x,EPS;
+	printf("Unesi x");
+	scanf("%f", &x);
+	printf("Unesi EPS ");
+	scanf("%f", &EPS);
+	while (fabsf(pow(-1, i + 1)*pow(x, i) / Faktorijel(i))>=EPS)
+	{
+		
+		S = S + pow(-1, i + 1)*pow(x, i) / Faktorijel(i);
+		i++;
+	}
+	printf("Suma elemenata je %.2f\n", S);	
+	printf("Elemenat %f je manji od EPS\n", fabsf(pow(-1, i + 1)*pow(x, i) / Faktorijel(i)));
+
+}

@@ -1,0 +1,32 @@
+/*Napisati funkciju koja od dva data stringa formira lozinku, tj treci sring, 
+tako sto uzima prvih k znakova iz prvog i zadnjih k znakova iz drugog stringa
+(k je ceo broj manji od duzine oba stringa). U glavnom programu uneti dva stringa
+i ceo broj k. Prikazati formiranu lozinku.*/
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<conio.h>
+
+void Formira(char s1[], char s2[], char s3[],int k)
+{
+	strncpy(s3, s1, k);
+	s3[k] = '\0';
+	strncat(s3, s2 + strlen(s2) - k,k);
+	s3[2 * k] = '\0';
+}
+main()
+{
+	char s1[20], s2[20], s3[20];
+	int k;
+	printf("Ucitaj  prvi string\n");
+	gets(s1);
+	printf("Ucitaj  drugi string\n");
+	gets(s2);
+	printf("Ucitaj  k koji je manji od duzine stringova\n");
+	scanf("%d", &k);
+	Formira(s1, s2, s3, k);
+	printf("Lozinka je:\n");
+	puts(s3);
+
+	
+}

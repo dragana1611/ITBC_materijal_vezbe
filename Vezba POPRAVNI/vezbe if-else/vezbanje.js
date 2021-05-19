@@ -31,7 +31,7 @@ console.log(`Novi broj je ${br1}`);
 let s=-12;
 let d=-98;
 let max = s;
-if (d>s){
+if (d>max){
     max = d;
     if(d%2==0){
         console.log(`Broj ${d} je maksimalan broj i paran je`);

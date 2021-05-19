@@ -1,0 +1,45 @@
+/*Napisati funkciju koja računa srednju vrednost elemenata niza realnih brojeva dužine n.
+Napisati drugu funkciju koja broji koliko elemenata niza ima vrednosti veće od neke zadate
+vrednosti. U glavnom programu uneti niz koji predstavlja rezultate takmičenja učenika i
+odrediti koliko je učenika ostvarilo nadprosečni rezultat na takmičenju.*/
+
+#include<stdio.h>
+
+float Srednja(float niz[], int n)
+{
+	int i;
+	float Sr=0;
+	for (i = 0; i < n; i++)
+	{
+		Sr = Sr + niz[i];
+	}
+	return Sr / n;
+}
+int Broji(float  niz[], int n, float srednjavrednost)
+{
+	int i, br = 0;
+	for (i = 0; i < n; i++)
+	{
+		if (niz[i] > srednjavrednost)
+		{
+			br++;
+		}
+	}
+	return br;
+}
+main()
+{
+	float rezultati[50];
+	int i, n;
+
+	printf("Unesite broj ucenika. ");
+	scanf_s("%d", &n);
+
+	printf("Unosite rezultate ucenika.\n");
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%f", &rezultati[i]);
+	}
+	printf("Nadprosecan rezultat imalo je %d ucenika.", Broji(rezultati, n, Srednja(rezultati, n)));
+}
+

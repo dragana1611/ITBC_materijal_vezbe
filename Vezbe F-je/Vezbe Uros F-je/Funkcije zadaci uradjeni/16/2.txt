@@ -1,0 +1,26 @@
+/*Napisati funkciju za racunanje rastojanja izmadju 2 tacke A(x1,y1) i B(x2,y2) po formuli:
+d=sqrt(pow(x1-x2,2)+pow(y1-y2,2))
+
+
+*/
+
+#include<stdio.h>
+#include<math.h>
+
+float Rastojanje(float x1, float y1, float x2, float y2)
+{
+	return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+}
+main()
+{
+	float O, P, x1, y1, x2, y2, x3, y3, S;
+
+	printf("Unesi kordinate za tri tacke ");
+	scanf("%f%f%f%f%f%f", &x1, &y1, &x2, &y2, &x3, &y3);
+
+	O = Rastojanje(x1, y1, x2, y2) + Rastojanje(x2, y2, x3, y3) + Rastojanje(x1, y1, x3, y3);
+	S = O / 2;
+	P = sqrt(S*(S - Rastojanje(x1, y1, x2, y2)) * (S - Rastojanje(x2, y2, x3, y3)) * (S - Rastojanje(x1, y1, x3, y3));
+
+	printf("O=%.2f\t P=%.2f\n", O, P);
+}

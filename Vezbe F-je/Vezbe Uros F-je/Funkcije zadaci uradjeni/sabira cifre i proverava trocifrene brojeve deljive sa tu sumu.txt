@@ -1,0 +1,26 @@
+/*Napisati funkciju koja proverava da li je trocifren broj deljiv sumom svojih cifara. U glavnom
+programu štampati brojeve iz opsaga od 300 do 999 koji su deljivi sumom svojih cifara*/
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+#include<stdlib.h>
+
+int Saberi(int br)
+{
+	int bra, brb, brc, suma, i = 0;
+	bra = br / 100;
+	brb = ((br % 100) / 10);
+	brc = br % 10;
+	suma = bra + brb + brc;
+	return suma;
+}
+main()
+{
+	int i;
+	for (i = 300; i <= 999; i++)
+	{
+		if (i%Saberi(i)==0)
+			printf("%d ", i);
+	}
+}

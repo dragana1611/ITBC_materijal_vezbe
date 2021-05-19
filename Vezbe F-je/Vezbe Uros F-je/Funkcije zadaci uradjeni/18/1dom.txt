@@ -1,0 +1,53 @@
+/*Napisati funkcije Insert (umeće podstring u string počev od zadate pozicije) i Replace
+(zamenjuje jedan podstring drugim u ulaznom stringu). Testirati funkcije. */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#include<string.h>
+
+char Insert(char *s1,char *s2,int K)
+{
+
+	strncat(s1, s2, K);
+
+	return s1;
+}
+
+char Replace(char *s1,char *s3,int K)
+{
+
+	strnc(s1, s3, K);
+	return s1;
+}
+
+main()
+{
+	char *s1, *s2, *s3;
+	int K;
+
+	s1 = calloc(60, sizeof(char));
+	s2 = calloc(30, sizeof(char));
+	s3 = calloc(30, sizeof(char));
+
+	printf("Unesite string s1. \n");
+	gets(s1);
+
+	printf("Unesite string s2. \n");
+	gets(s2);
+
+	printf("Unesite string s3. \n");
+	gets(s3);
+
+	printf("Unesite poziciju K.");
+	scanf_s("%d", &K);
+
+	printf("String nakon funkcije Insert izgleda:\n");
+	Insert(s1, s2, K);
+	puts(s1);
+
+	printf("String nakon funkcije Replace izgleda:\n");
+	Replace(s1, s3, K);
+	puts(s1);
+}

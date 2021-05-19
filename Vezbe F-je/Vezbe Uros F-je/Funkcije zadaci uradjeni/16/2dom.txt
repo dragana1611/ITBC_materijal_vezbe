@@ -1,0 +1,44 @@
+/*Napisati funkciju koja proverava da li je prirodni broj n prost broj. U glavnom programu uneti
+niz prirodnih brojeva A(N). Prebrojati i štampati one koji su prosti.*/
+
+#include<stdio.h>
+
+int Prost(int x)
+{
+	int i = 3;
+	if (x == 2 || x == 3)return 1;
+	if (x % 2 == 0)return 0;
+	while (x % i != 0 && i <= x / 2)
+	{
+		i++;
+	}
+	if (x % i == 0)return 0;
+	else return 1;
+}
+main()
+{
+	int niz[30], i, n, br = 0;
+
+	printf("Unesite broj prirodnih brojeva. ");
+	scanf_s("%d", &n);
+
+	printf("Unosite prirodne brojeve:\n");
+	for (i = 0; i < n; i++)
+	{
+		scanf_s("%d", &niz[i]);
+	}
+
+	printf("\n");
+
+	for (i = 0; i < n; i++)
+	{
+		if (Prost(niz[i])==1)
+		{
+			br++;
+			printf("%d ", niz[i]);
+			
+		}
+	}
+
+	printf("Ima %d prirodnih brojeva.", br);
+}

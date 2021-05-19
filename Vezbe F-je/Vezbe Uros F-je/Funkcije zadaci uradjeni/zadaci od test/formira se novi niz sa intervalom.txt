@@ -1,0 +1,43 @@
+/*Napisati funkciju koja iz niza realnih brojeva 
+formira novi niz u koji treba prepisati elemente
+prvog niza koji se nalaze u zadatom intervalu [X,Y].
+U glavnom programu učitati početni niz i od njega
+formirati novi prepisivanjem samo dvocifrenih brojeva
+iz početnog niza. Prikazati novi niz.*/
+#include<stdio.h>
+void Prepisi(float niz1[], float niz2[], float  x, float y,int n1,int *n2)
+
+{
+	int i;
+	*n2 = 0;
+	for (i = 0; i < n1; i++)
+	{
+		if (niz1[i] >= x &&niz1[i] <= y)
+		{
+			niz2[*n2]=niz1[i];
+			(*n2)++;
+		}
+	}
+}
+main()
+{
+	float a[20], b[20], x, y;
+	int n1, n2,i;
+	printf("Unesi duzinu prvog niza ");
+	scanf("%d", &n1);
+	printf("Ucitaj niz \n");
+	for (i = 0; i < n1; i++)
+	{
+		scanf("%f", &a[i]);
+	}
+
+	Prepisi(a, b, 10,99, n1, &n2);
+	printf("Novi niz je:\n");
+	for (i = 0; i < n2; i++)
+	{
+		printf("%.2f ", b[i]);
+	}
+	printf("\n");
+
+
+}

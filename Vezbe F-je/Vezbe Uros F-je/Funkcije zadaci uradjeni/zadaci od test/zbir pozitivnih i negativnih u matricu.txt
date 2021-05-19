@@ -1,0 +1,36 @@
+
+/*Napisati funkciju kojom se nalazi zbir pozitivnih 
+i zbir negativnih u nizu od n brojeva.
+ U glavnom programu uneti matricu i korišćenjem funkcije 
+ odrediti zbir pozitivnih i 
+zbir negativnih elemenata u svakoj vrsti*/
+#include<stdio.h>
+void Zbir(int niz[],int n,int *Spoz,int *Sneg)
+{
+	int i;
+	*Spoz=0;
+	*Sneg=0;
+	for (i = 0; i < n; i++)
+	{
+	if(niz[i]>0) (*Spoz)+=niz[i];
+	else (*Sneg)+=niz[i];
+	}
+}
+main()
+{
+	int i,n,mat[30][40],j,m,spoz[30],sneg[30];
+	scanf("%d%d", &n,&m);
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+		scanf("%d",&mat[i][j]);
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		Zbir(mat[i],m,&spoz[i],&sneg[i]);
+		printf("%d %d",spoz[i],sneg[i]);
+	}
+
+}

@@ -1,0 +1,26 @@
+/*Napisati funkciju za sabiranje cifara trocifrenog broja. U glavnom programu ispisati sve brojeve
+od 300 do 400 za koje važi da je zbir cifara >=20.*/
+
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+#include<stdlib.h>
+
+int Saberi(int br)
+{
+	int bra, brb, brc, suma, i = 0;
+	bra = br / 100;
+	brb = ((br % 100) / 10);
+	brc = br % 10;
+	suma = bra + brb + brc;
+	return suma;
+}
+main()
+{
+	int i;
+	for (i = 300; i <= 400; i++)
+	{
+		if (Saberi(i) >= 20)
+			printf("%d ", i);
+	}
+}

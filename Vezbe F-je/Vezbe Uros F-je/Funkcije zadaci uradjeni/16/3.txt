@@ -1,0 +1,48 @@
+/*Napisati funkciju prost koja ispituje da li broj x prost broj. Napisati program kojim se za dati
+prirodni broj n veći od 1, određuje najbliži prost broj. Ako su dva prosta broja na istom
+rastojanju, prikazati oba.*/
+#include<stdio.h>
+int Prost(int x)
+{
+	int i=3;
+	if (x == 2 || x == 3)return 1;
+	if (x % 2 == 0)return 0;
+	while (x%i != 0 && i < x / 2)
+	{
+		i++;
+	}
+	if (x % i == 0)return 0;
+	else return 1;
+}
+main()
+{
+	int broj, i,manji,veci;
+	printf("Unesi broj ");
+	scanf("%d", &broj);
+	i = broj-1;
+	while (i > 1 && Prost(i) == 0)
+	{
+		i--;
+	}
+	if (Prost(i) == 1)manji = i;
+	i = broj + 1;
+	while (Prost(i) == 0)
+	{
+		i++;
+	}
+	veci = i;
+	if (broj - manji > veci - broj)
+	{
+		printf("%d\n", veci);
+	}
+	else if (broj - manji == veci - broj)
+	{
+		printf("Oba su podjednako udaljena %d %d\n", manji, veci);
+	}
+	else
+	{
+		printf("%d\n", manji);
+	}
+
+
+}

@@ -1,0 +1,40 @@
+/*Napisati funkciju kojom se izračunava obim kruga poluprečnika r i funkciju kojim se izračunava
+površina kruga poluprečnika r.U glavnom programu izračunati sumu obima i sumu površina n
+krugova čiji su poluprečnici r = 2 * i, i = 1, 2, 3, ..., n*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+float Obim(float r)
+{
+	float O;
+	
+	O = 2 * 3.14 * r;
+	return O;
+}
+float Povrsina(float r)
+{
+	float P;
+
+	P = pow(r, 2) * 3.14;
+	return P;
+}
+main()
+{
+	float P, O, r,SumaO=0,SumaP=0;
+	int n,i;
+
+	printf("Unesite broj krugova. ");
+	scanf_s("%d", &n);
+
+	for (i = 0; i <= n; i++)
+	{
+		r = i * 2;
+		SumaO = SumaO + Obim(r);
+		SumaP = SumaP + Povrsina(r);
+
+	}
+	printf("Suma Obima je %f\n", SumaO);
+	printf("Suma Povrsina je %f\n", SumaP);
+}

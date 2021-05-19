@@ -1,0 +1,42 @@
+/*Napisati funkciju koja ispituje da li je prirodni broj x savršen(jedan sumi svojih delitelja ne
+	računajući njega samog).U glavnom programu korišćenjem funkcije prikazati sve savršene
+	jedno - , dvo - i tro - cifrene brojeve.*/
+
+#include <stdio.h>
+
+int Savrsen(int x)
+{
+	int i,S=0;
+
+	for (i = 1; i <= x / 2; i++)
+	{
+		if (x % i == 0)
+		{
+			S += i;
+		}
+	}
+	if (x == S)
+	{
+		return 1;
+	}
+		
+
+	else
+	{
+		return 0;
+	}
+}
+main()
+{
+	int i;
+
+	for (i = 1; i <= 999; i++)
+	{
+		if (Savrsen(i))
+		{
+			printf("%d ", i);
+		}
+	}
+
+	printf("\n");
+}

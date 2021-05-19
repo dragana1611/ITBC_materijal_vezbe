@@ -1,0 +1,84 @@
+/*Napisati sledeće funkcije:
+a) funkciju za unos elemenata niza
+b) funkciju za prikaz elemenata niza
+c) funkciju koja proverava da li zadati elemenat postoji u nizu
+d) funkcija koja nalazi prvo pojavljivanje zadatog elementa u nizu
+e) funkciju za izbacivanje prvog pojavljivanja zadatog elementa iz niza
+U glavnom program testirati funkcije tako što iz unetog niza izbacimo svako pojavljivanje jednice
+u njima. Niz treba prikazati pre i posle promene.*/
+#include<stdio.h>
+//a) funkciju za unos elemenata niza
+void Unos(int niz[], int n)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &niz[i]);//niz+i
+	}
+}
+//b) funkciju za prikaz elemenata niza
+void Prikaz(int niz[], int n)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		printf("%d ", niz[i]);//*(niz+i)
+	}
+}
+//c) funkciju koja proverava da li zadati elemenat postoji u nizu
+Postoji(int niz[], int n, int x)
+{
+	int i = 0;
+	while (*(niz + i) != x && i < n)// 0 1 2 5 9
+	{
+		i++;
+	}
+	/*for(i=0;i<n;i++)
+	{
+	if(niz[i]==x) return 1;
+	}
+	return 0
+	*/
+	if (*(niz + i) == x)return 1;
+	else return 0;
+}
+//d) funkcija koja nalazi prvo pojavljivanje zadatog elementa u nizu
+void Prvo(int niz[], int *n, int *ind,int x)
+{
+	int i = 0;
+	*ind = -1;
+	while (*(niz + i) != x && i < *n)
+	{
+		i++;
+	}
+	if (*(niz + i) == x) *ind = i;	
+}
+
+//e) funkciju za izbacivanje prvog pojavljivanja zadatog elementa iz niza
+void Izbaci(int niz[], int *n, int *ind, int x)
+{
+	int i;
+	for (i = *ind; i < *n - 1; i++)
+	{
+		*(niz + i) = *(niz + i + 1);
+	}
+	(*n)--;
+}
+main()
+{
+	int *niz, n, i,*ind;
+	printf("Unesi duzinu niza ");
+	scanf("%d", &n);
+	niz = calloc(n, sizeof(int));
+	Unos(niz, n);
+	printf("Niz  pre promene je\n");
+	Prikaz(niz, n);
+	while (Postoji(niz, n, 1))
+	{
+		Prvo(niz, &n, &ind, 1);
+		Izbaci(niz, &n, &ind, 1);
+	}
+	printf("Niz  posle promene je\n");
+	Prikaz(niz, n);
+}
+

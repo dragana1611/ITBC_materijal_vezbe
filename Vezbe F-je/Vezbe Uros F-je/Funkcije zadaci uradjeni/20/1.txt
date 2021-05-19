@@ -1,0 +1,53 @@
+/*Napisati funkciju u kojoj se ispituje da li je broj X deljiv sa K. U glavnom programu uneti matricu
+A koji sadrži NxM prirodnih brojeva i štampati one koji su deljivi sa 15.*/
+#include<stdio.h>
+#include<stdlib.h>
+int deljiv(int x, int k)
+{
+	if (x % k == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+main()
+{
+	int mat[10][20], i, j, n, m, deljivo;
+	printf("Unesite granice n i m: ");
+	scanf_s("%d%d", &n, &m);
+	printf("Unesite matricu: ");
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			scanf_s("%d", &mat[i][j]);
+		}
+	}
+	printf("Brojevi deljivi sa 15 u matrici: ");
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			deljivo = deljiv(mat[i][j], 15);
+			if (deljivo == 1)
+			{
+				printf("% d", mat[i][j]);
+			}
+		}
+	}
+	printf("\nBrojevi u matrici koji nisu deljivi sa 15: ");
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			deljivo = deljiv(mat[i][j], 15);
+			if (deljivo == 0)
+			{
+				printf("% d", mat[i][j]);
+			}
+		}
+	}
+}

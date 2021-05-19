@@ -1,0 +1,33 @@
+/*Napisati funkcije koja proverava da li uneti string može da 
+predstavlja heksadecimalni zapis (heksa zapis se sastoji od cifara 0 do 9
+i slova A do F). U glavnom programu unosimo n stringova i brojimo 
+koliko među njima ima heksadecimalnih zapisa*/
+#include<stdio.h>
+#include<ctype.h>
+int Heksa(char s[], int n)
+{
+	int i=0;
+	
+	while (isxdigit(s[i]) && i < n)
+	{
+		i++;
+	}
+	if (i == n) return 1;
+	else return 0;
+		
+}
+main() 
+{
+	int i, n,br=0;
+	char niz[10][20];
+	printf("Unesi broj stringova: ");
+	scanf("%d", &n);
+	printf("Unesi string:");
+	for (int i = 0; i < n; i++)
+	{
+		scanf("%s", niz[i]);
+		br += Heksa(niz[i], strlen(niz[i]));
+		
+	}
+	printf("broj heksadecimalnih zapisa je %d",br);
+}

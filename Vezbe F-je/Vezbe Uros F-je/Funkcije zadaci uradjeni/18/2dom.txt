@@ -1,0 +1,56 @@
+
+#include<stdio.h>
+#include<string.h>
+
+char* sredi(char niz[]) {
+
+	int n = strlen(niz);
+
+	for (int i = 0; i < n; i ++) {
+		if (niz[i] == ' ' && niz[i + 1] == ' ') {
+			for (int j = i; j < (n - 1); j++) {
+				niz[j] = niz[j+1];
+			}
+			niz[n - 1] = '\0';
+		}
+	}
+
+	for (int i = 0; i < n; i++) {
+		if (niz[i] == '.' || niz[i] == '!' || niz[i] == '?' || niz[i] == ',' && niz[i+1] != ' ') {
+			n = n + 1;
+			for (int j = n; j > i; j--) {
+				niz[j] = niz[j - 1];
+			}
+			niz[i + 1] = ' ';
+		}
+
+	}
+
+
+	for (int i = 0; i < n; i++) {
+
+		if (i == 0 && niz[i] > 'a' && niz[i] < 'z') {
+			niz[i] -= 'a' - 'A';
+		}
+
+		if (niz[i] == '.' || niz[i] == '!' || niz[i] == '?' && niz[i + 1] == ' ') {
+			if (niz[i + 2] > 'a' && niz[i + 2] < 'z')
+				niz[i + 2] -= 'a' - 'A';
+		}
+	}
+
+	return niz;
+
+}
+
+main()
+{
+	char niz[100] = { "danas je.subota  a sutra,je nedelja?" };
+
+	sredi(niz);
+
+	for (int i = 0; i < strlen(niz); i++) {
+		printf("%c", niz[i]);
+	}
+
+}

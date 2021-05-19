@@ -1,0 +1,38 @@
+/*Napisati funkciju koja racuna sumu pozitivnih elemenata niza realnih brojeva dužine n. U
+glavnom programu uneti K nizova i za svaki od njih prikazati sumu pozitivnih elemenata niza*/
+#include<stdio.h>
+#include<stdlib.h>
+
+float izracunajSumu(float x[], int n)
+{
+	float s = 0;
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		s += x[i];
+	}
+	return s;
+}
+
+main()
+{
+	float mat[10][50], suma=0;
+	int n, m, i, j, k = 1;
+	printf("Unesite koliko nizova zelite da unesete: ");
+	scanf_s("%d", &n);
+	printf("Unesite duzinu nizova: ");
+	scanf_s("%d", &m);
+	printf("Unesite nizove: ");
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			scanf_s("%f", &mat[i][j]);
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		suma = izracunajSumu(mat[i], m);
+		printf("%.2f\n ", suma);
+	}
+}

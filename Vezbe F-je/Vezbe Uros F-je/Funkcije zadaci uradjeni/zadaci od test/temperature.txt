@@ -1,0 +1,42 @@
+/*Napisati funkciju koja se za interval od n dana određuje broj dana
+sa temperaturom iznad, ispod i jednakom nuli.
+Temperature su zapamćene u nizu dužine n.
+U glavnom programu uneti temperature u toku januara meseca, 
+pozvati funkciju i prikazati koliko je puta prosečna dnevna
+tempratura bila u plusu, koliko puta u minusu, a koliko puta nula.*/
+#include<stdio.h>
+void Temperatura(int temp[], int n, int *brmin, int *brnula, int *brplus)
+{
+	int i;
+	for (i = 0; i < n; i++)
+	{
+		if (temp[i] < 0)
+		{
+			(*brmin)++;
+		}
+		if (temp[i] == 0)
+		{
+			(*brnula)++;
+		}
+		if(temp[i] > 0)
+		(*brplus)++;
+	}
+
+}
+main()
+{
+	int i, n, brminus=0, brnula=0, brplus=0,t[40];
+	printf("Ucitaj broj dana : "); 
+	scanf("%d", &n);
+	printf("Ucitaj temperature\n");
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &t[i]);
+	}
+	Temperatura(t, n, &brminus, &brnula, &brplus);
+	printf("broj temperatura u plusu je %d\n", brplus);
+	printf("broj temperatura nula je %d\n", brnula);
+	printf("broj temperatura u minusu je %d\n", brminus);
+
+
+}
