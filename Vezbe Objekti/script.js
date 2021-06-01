@@ -446,6 +446,49 @@ let dan = {
             }
         }
         return nepovoljan;
+    },
+
+    /*  //Napisati metod koji na ekranu ispisuje neuređenu listu, čija je sadržina (čiji su elementi/buleti) vrednosti temperature iz datog niza temperatura.
+--Maksimalnu(ili maksimalne ukoliko ih je više) vrednost u neurešenoj listi obojiti crvenom bojom.
+--Minimalnu(ili minimalne vrednosti ukoliko ih je više) obojiti plavom bojom.*/
+    maxT:function(){
+        let max = this.Temperature[0];
+        this.Temperature.forEach(temp=>{
+            if(temp>max){
+                max=temp;
+            }
+        });
+        return max;
+    },
+    minT: function () {
+        let min = this.Temperature[0] ;
+        this.Temperature.forEach(temp => {
+            if (temp < min) {
+                min = temp;
+            }
+        });
+        return min;
+    },
+    neurLista:function(){
+        let maximum=this.maxT();
+        let minimum=this.minT();
+        let lista=`<ul>`;
+        this.Temperature.forEach(temp=>{
+            if(temp==maximum){
+                lista += `<li style="color:red;">${temp}</li>`;
+            }
+
+            else if (temp == minimum){
+                
+                lista += `<li style="color:blue;">${temp}</li>`;
+            }
+            else{
+                lista += `<li>${temp}</li>`;  
+            }
+        }); 
+
+        lista += `</ul>`;
+        return document.body.innerHTML += lista;
     }
     };
 
@@ -458,5 +501,115 @@ console.log(dan.iznadPros());
 console.log(dan.prosecnaT());
 console.log(dan.vecinaIznPro());
 console.log(dan.vece8());
+dan.neurLista();
+console.log(dan.maxT());
+console.log(dan.minT());
+
+
+/**Formirati objekat dan koji sadrži:
+●	Datum (string u formatu YYYY/MM/DD),
+●	Kiša (true/false),
+●	Sunce (true/false),
+●	Oblačno (true/false),
+●	Vrednosti temperature (Niz temperatura tog dana)
+
+Napraviti niz dan objekata (niz od najmanje 3 objekta).
+
+Napraviti arrow funksiju koja u konzoli ispisuje datum u kome je najviše puta izmerena temperatura. Ukoliko ima više takvih datuma, ispisati poslednji od njih.
+
+Napraviti arrow funksiju koja prebrojava i u konzoli ispisuje koliko je bilo kišnih dana, koliko je bilo sunčanih dana i koliko je bilo oblačnih dana
+
+Napraviti arrow funkciju koja računa i vraća koliko je bilo dana sa natprosečnom temperaturom. Pozvati ovu funkciju i njen rezultat ispisati u konzoli.
+ */
+
+dan01 = {
+    datum: "2021/05/18",
+    kisa: true,
+    sunce: false,
+    oblacno: true,
+    temperature: [3, 6, 11, 13, 18, 20, 17, 13, 7]
+}
+
+dan02 = {
+    datum: "2021/05/19",
+    kisa: true,
+    sunce: true,
+    oblacno: true,
+    temperature: [5, 10, 13, 22, 17, 12, 8, 3]
+}
+
+dan03 = {
+    datum: "2021/05/20",
+    kisa: false,
+    sunce: false,
+    oblacno: true,
+    temperature: [4, 5, 11, 15, 19, 18, 17, 10, 7, 2]
+}
+
+dan04 = {
+    datum: "2021/05/21",
+    kisa: false,
+    sunce: false,
+    oblacno: true,
+    temperature: [6, 16, 19, 23, 12, 8, 3]
+}
+
+dan05 = {
+    datum: "2021/05/22",
+    kisa: false,
+    sunce: false,
+    oblacno: true,
+    temperature: [2, 5, 15, 19, 23, 18, 12, 8, 5, 3]
+}
+
+//Napraviti niz dan objekata
+
+let dani1 = [dan01, dan02, dan03, dan04, dan05];
+
+//Napraviti arrow funkciju koja u konzoli ispisuje datum u kome je najviše puta izmerena temperatura. Ukoliko ima više takvih datuma, ispisati poslednji od njih.
+let najvisePutaIzmerTemper=nizDanaa=>{
+    let najvPuta=0;
+    let brojacMerenja=null;
+    for(let i=0; i<nizDanaa.length; i++){
+        if(nizDanaa[i].temperature.length>=najvPuta){
+            najvPuta=nizDanaa[i].temperature.length;
+            brojacMerenja=nizDanaa[i].datum;
+        }
+    }
+    return brojacMerenja;
+}
+console.log(najvisePutaIzmerTemper(dani1));
+
+let najvisePutaIzmerTemper1 = nizDanaa=>{
+    let najvPuta1=0;
+    let brojacMerenja1=null;
+    for(let i=0; i<nizDanaa.length; i++){
+        if (nizDanaa[i].temperature.length>najvPuta1){
+            najvPuta1=nizDanaa[i].temperature.length;
+            brojacMerenja1 = nizDanaa[i].datum;
+        }
+    }
+    return brojacMerenja1;
+}
+console.log(najvisePutaIzmerTemper1(dani1));
+
+//Napraviti arrow funkciju koja računa i vraća koliko je bilo dana sa natprosečnom temperaturom. Pozvati ovu funkciju i njen rezultat ispisati u konzoli.
+let natprosecnaT=nizDanaa=>{
+    let suma =0;
+    let brTemp=0;
+    let brojacDana=0;
+    for(let i=0; i<nizDanaa.length; i++){
+        for(let j=0; j<nizDanaa[i].temperature.length; j++){
+            suma += nizDanaa[i].temperature[j];
+            brTemp++;
+            if (nizDanaa[i].temperature[j]>suma/brTemp){
+                brojacDana++;
+                break;
+            }
+        }
+    }
+    return brojacDana;
+}
+console.log(natprosecnaT(dani1));
 
 
