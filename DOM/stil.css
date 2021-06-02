@@ -1,0 +1,8 @@
+.error {
+   color: red !important;
+   border: solid 1px red !important;
+}
+.success {
+   color: green !important;
+   border: solid 1px green !important;
+}
