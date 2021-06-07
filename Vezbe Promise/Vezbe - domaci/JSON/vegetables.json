@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "broccoli",
+        "color": "green",
+        "weight": "90"
+    },
+    {
+        "id": 2,
+        "name": "carrot",
+        "color": "orange",
+        "weight": "116"
+    },
+    {
+        "id": 3,
+        "name": "paprika",
+        "color": "green",
+        "weight": "135"
+    },
+    {
+        "id": 4,
+        "name": "spinach" ,
+        "color": "darkgreen",
+        "weight": "50"
+    },
+    {
+        "id": 5,
+        "name": "potato",
+        "color": "navajowhite",
+        "weight": "100"
+    },
+    {
+        "id": 6,
+        "name": "onion",
+        "color": "wheat",
+        "weight": "75"
+    },
+    {
+        "id": 7,
+        "name": "green bean",
+        "color": "green",
+        "weight": "70"
+    },
+    {
+        "id": 8,
+        "name": "cabbage",
+        "color": "palegreen",
+        "weight": "85"
+    },
+    {
+        "id": 9,
+        "name": "cucumber",
+        "color": "darkgreen",
+        "weight": "115"
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "apple",
+        "color": "green",
+        "weight": "150"   
+    },
+    {
+        "id": 2,
+        "name": "banana",
+        "color": "yellow",
+        "weight": "116"   
+    },
+    {
+        "id": 3,
+        "name": "strawberries",
+        "color": "red",
+        "weight": "32"    
+    },
+    {
+        "id": 4,
+        "name": "pear",
+        "color": "gold",
+        "weight": "100"
+    },
+    {
+        "id": 5,
+        "name": "raspberries",
+        "color": "mediumvioletred",
+        "weight": "50"
+    },
+    {
+        "id": 6,
+        "name": "cherry",
+        "color": "darkred",
+        "weight": "85"
+    },
+    {
+        "id": 7,
+        "name": "pomegranate",
+        "color": "maroon",
+        "weight": "25"
+    },
+    {
+        "id": 8,
+        "name": "peach",
+        "color": "orangered",
+        "weight": "65"
+    },
+    {
+        "id": 9,
+        "name": "blackberries",
+        "color": "black",
+        "weight": "35"
+    }
+]
