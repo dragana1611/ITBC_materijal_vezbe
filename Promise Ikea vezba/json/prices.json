@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "item": "polica 20cm",
+        "price": 1299.90
+    },
+    {
+        "id": 2,
+        "item": "polica 40cm",
+        "price": 1899.90
+    },
+    {
+        "id": 3,
+        "item": "fotelja lux",
+        "price": 35990.90
+    },
+    {
+        "id": 4,
+        "item": "radna stolica lux",
+        "price": 15000.00
+    },
+    {
+        "id": 5,
+        "item": "radni sto lux",
+        "price": 25000.00
+    }
+]

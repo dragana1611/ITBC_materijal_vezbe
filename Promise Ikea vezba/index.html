@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IKEA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+
+        <div class="col-t-6 col-6 divl">
+
+            <div class="divTbl">
+                <div id="order">
+                    <label for="capacity">Kapacitet kamiona:</label>
+                    <form>
+                        <input type="number" name="capacity" id="capacity">
+                        <input type="submit" value="Check!" class="button">
+                    </form>
+                    <table class="table1"></table>
+                </div><br>
+
+                <div id="order2">
+                    <label for="item">Naziv proizvoda</label>
+                    <form>
+
+                        <input type="text" name="item" id="item"><br>
+                        <label for="item">Minimalna cena</label>
+                        <label for="item">Maksimalna cena</label><br>
+                        <input type="number" name="cena" id="minCena">
+                        <input type="number" name="cena" id="maxCena">
+                        <input type="submit" value="Check!" class="button">
+                    </form>
+                    <div class="divUl">
+                        <center><h3>Rezultat pretrage:</h3></center>
+                        <center><hr></center>
+                        <center>
+                            <ul class="ul1">
+                                
+                            </ul>
+                        </center>
+                    </div>
+                    <table class="table2">
+                        <tr>
+                            <th>Naziv artikla</th>
+                            <th>Stanje u magacinu</th>
+                            <th>Cena artikla</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-t-6 col-6 divd">
+            <div class='divImg'>
+                <center>
+                    <img src="slike/Ikea.jpg" alt="">
+                </center>
+            </div>
+            <center>
+                <div id="idclock" class="classclock"></div>
+            </center>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

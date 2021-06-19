@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family:  'Poppins', sans-serif;
+}
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+/* Mobilni uređaji */
+@media only screen and (max-width: 349px) {
+    [class*="col-"] {
+    width: 100%;
+    }
+}
+/* Za tablet uređaje */
+@media only screen and (min-width: 350px) and (max-width: 600px) {
+    [class*="col-t-"] {
+        float: left;
+        }
+    .col-t-1 {
+        width: 8.33%;
+    }
+    .col-t-2 {
+        width: 16.66%;
+    }
+    .col-t-3 {
+        width: 25%;
+    }
+    .col-t-4 {
+        width: 33.33%;
+    }
+    .col-t-5 {
+        width: 41.66%;
+    }
+    .col-t-6 {
+        width: 50%;
+    }
+    .col-t-7 {
+        width: 58.33%;
+    }
+    .col-t-8 {
+        width: 66.33%;
+    }
+    .col-t-9 {
+        width: 75%;
+    }
+    .col-t-10 {
+        width: 83.33%;
+    }
+    .col-t-11 {
+        width: 91.66%;
+    }
+    .col-t-12 {
+        width: 100%;
+    }
+    
+}
+
+/* Desktop  uređaji */
+@media only screen and (min-width: 601px) {
+    [class*="col-"] {
+    float: left;
+    }
+    .col-1 {
+      width: 8.33%;
+    }
+    .col-2 {
+      width: 16.66%;
+    }
+    .col-3 {
+      width: 25%;
+    }
+    .col-4 {
+      width: 33.33%;
+    }
+    .col-5 {
+      width: 41.66%;
+    }
+    .col-6 {
+      width: 50%;
+    }
+    .col-7 {
+      width: 58.33%;
+    }
+    .col-8 {
+      width: 66.66%;
+    }
+    .col-9 {
+      width: 75%;
+    }
+    .col-10 {
+      width: 83.33%;
+    }
+    .col-11 {
+      width: 91.66%;
+    }
+    .col-12 {
+      width: 100%;
+    }
+}
+body{
+    background-color:yellow;
+    height: 800px;
+}
+
+table{
+    margin: 20px;
+    border-collapse: collapse;
+    border: 2px solid rgb(1, 38, 138);    
+    width: 80%;
+}
+
+td, th{
+    color:rgb(1, 38, 138);
+    border: 1px solid rgb(1, 38, 138); 
+    text-align: center;
+    height: 40px;
+    width: 100%px;
+}
+th{
+    border: 2px solid rgb(1, 38, 138);
+    background-color: rgb(1, 69, 255);
+    color:rgb(255, 255, 255) ;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+td{
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+label{
+    display: inline-block;
+    width: 33.3333%;
+    margin: 10px;
+    padding-top: 20px;
+    color:rgb(1, 38, 138);
+    font-weight: bold;
+}
+input{
+    margin: 10px;
+    padding: 5px;
+    width: 33.333%;
+    border: 1px solid rgb(1, 38, 138);
+    border-radius:5px;
+    color: rgb(1, 38, 138);
+    font-weight: 600;
+}
+.button{
+    width: 15%;
+    background-color: rgb(1, 69, 255);
+    color: white;
+    text-shadow: 1px 1px black;
+    box-shadow: 2px 2px 2px black;
+}
+div#order{
+    margin: 20px;
+    padding: 20px;    
+    width: 100%;
+    height: max-content;   
+}
+div#order2{
+    margin: 20px;
+    padding: 20px;    
+    width: 100%;
+    height: max-content;   
+}
+.divImg{
+    margin: 20px;
+    padding: 20px;    
+    width: 100%;
+    height: max-content;
+    
+}
+.divl{
+    width: 50%;
+    background-color: yellow;
+}
+.divd{
+    width: 50%;
+    background-color: rgb(1, 38, 138);
+}
+.divUl{
+    margin: 20px;
+    padding: 20px;    
+    width: 80%;
+    height: max-content;
+    color: rgb(1, 38, 138);
+    font-weight: bolder;
+}
+ul{
+    margin: 20px;
+    padding: 5px;
+    list-style-type: none;
+}
+p{
+    margin: 20px;
+    color:rgb(1, 38, 138) 
+}
+img{  
+    height: 600px;
+    border:2px solid yellow;
+    box-shadow: 3px 3px 2px rgb(143, 138, 113);
+}
+.classclock{
+    color:yellow;
+    font-size: 130%;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+hr{
+    border: 1px solid rgb(1, 38, 138);
+}
